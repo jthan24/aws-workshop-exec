@@ -7,6 +7,9 @@ aws cloudformation validate-template --template-body file://pre-requisites.yaml
 
 aws cloudformation create-stack --stack-name NetworkingWorkshopPrerequisites --template-body file://pre-requisites.yaml --capabilities CAPABILITY_NAMED_IAM
 
+
+aws cloudformation delete-stack --stack-name NetworkingWorkshopPrerequisites 
+
 ```
 
 # terraform
@@ -15,7 +18,7 @@ aws cloudformation create-stack --stack-name NetworkingWorkshopPrerequisites --t
 terraform init
 terraform plan
 terraform apply
-
+terraform destroy
 ```
 
 
